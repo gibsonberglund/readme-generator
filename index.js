@@ -1,10 +1,13 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+//const generateMarkdown = require('./utils/generateMarkdown.js');
 
+//generateMarkdown();
 // TODO: Create an array of questions for user input
+
+const Quest = "Describe the function of your application, and the problem it solves for the user.";
 /*
-const Q1 = "Describe the function of your application, and the problem it solves for the user.";
 const Q2 = "What sections will you include in this README?";
 const Q3 = "How does the user install your application?";
 const Q4 = "Explain how to use your application.";
@@ -23,7 +26,7 @@ inquirer
         },
         {
             type: 'input',
-            message: "Describe the function of your application, and the problem it solves for the user.",
+            message: Quest,
             name: 'Q2',
         },
         {
@@ -67,7 +70,7 @@ inquirer
         },
     ])
 
-
+    
 //const table = [Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8];
 
     .then((response) => {
@@ -75,7 +78,7 @@ inquirer
         if (response.Q5 === "Apache") {
             badge = `![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)`;
         } else if (response.Q5 === "MIT") {
-            badge = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`;
+            badge = `![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`;
         } else if (response.Q5 === "BSD") {
             badge = `![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)`;
         } else if (response.Q5 === "Boost Software") {
@@ -91,10 +94,9 @@ inquirer
         } else if (response.Q5 === "The Unlicense") {
             badge = `![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)`;
         } else {
-            prompt("The license you entered does not exist");
+            badge = ``
         };
-        
-        
+
         let template =
         `# ${response.Q1}
 ${badge}
@@ -103,12 +105,12 @@ ${badge}
         ${response.Q2}
 
 ## Table of Contents
-        Installation
-        Usage
-        License
-        Credits
-        Tests
-        Questions
+[Installation](#Installation)
+[Usage](#Usage)
+[License](#License)
+[Credits](#Credits)
+[Tests](#Tests)
+[Questions](#Questions)
 
 ## Installation
         ${response.Q3}
@@ -117,7 +119,7 @@ ${badge}
         ${response.Q4}
 
 ## License
-        ${response.Q5}
+        This application is covered under the ${response.Q5} License
 
 ## Credits
         ${response.Q6}
