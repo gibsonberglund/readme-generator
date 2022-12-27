@@ -84,7 +84,7 @@ inquirer
         
         let template =
         `# ${response.Q1}
-        ${badge}
+${badge}
 
 ## Description
         ${response.Q2}
