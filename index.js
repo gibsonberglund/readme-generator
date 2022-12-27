@@ -13,7 +13,7 @@ const Q6 = "Who helped you build this application?";
 const Q7 = "How do you test this application?";
 const Q8 = "What questions came up during the development of this application?";
 */
-//const questions = [Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8];
+let badge
 
 inquirer
     .prompt([
@@ -39,7 +39,16 @@ inquirer
         },
         {
             type: 'input',
-            message: "What license do you give your application?",
+            message: `Choose a license from the following list:
+            Apache
+            MIT
+            BSD
+            Boost Software
+            Creative Commons
+            Eclipse Public
+            GNU General Public
+            Mozilla Public
+            The Unlicense`,
             name: 'Q5',
         },
         {
@@ -60,34 +69,59 @@ inquirer
     ])
 
 
-//will need to generate table of contents separately
+//const table = [Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8];
 
     .then((response) => {
+        
+        if (response.Q5 = "Apache") {
+            badge = `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
+        } else if (response.Q5 = "MIT") {
+            badge = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
+        } else {
+            prompt("The license you entered does not exist")
+        };
+        
+        
         let template =
         `# ${response.Q1}
-    ## Description
+        ${badge}
+
+## Description
         ${response.Q2}
-    ## Table of Contents
-        Table
-    ## Installation
+
+## Table of Contents
+        Installation
+        Usage
+        License
+        Credits
+        Tests
+        Questions
+
+## Installation
         ${response.Q3}
-    ## Usage
+
+## Usage
         ${response.Q4}
-    ## License
+
+## License
         ${response.Q5}
-    ## Credits
+
+## Credits
         ${response.Q6}
-    ## Tests
+
+## Tests
         ${response.Q7}
-    ## Questions
+
+## Questions
         ${response.Q8}
     `
         fs.writeFile('README.md', template, (err) =>
         err ? console.log(err) : console.log("Success!"))
-    })    
+    });
 
-// TODO: Create a function to write README file
-//function writeToFile(fileName, data) {}
+
+
+
 
 // TODO: Create a function to initialize app
 //function init() {}
