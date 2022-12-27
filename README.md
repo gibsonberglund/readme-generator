@@ -1,8 +1,8 @@
-# d
-![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]
+# a
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ## Description
-        f
+        a
 
 ## Table of Contents
         Installation
@@ -13,20 +13,20 @@
         Questions
 
 ## Installation
-        d
+        a
 
 ## Usage
         a
 
 ## License
-        Apache
+        MIT
 
 ## Credits
-        f
+        a
 
 ## Tests
-        g
+        a
 
 ## Questions
-        d
+        a
     
