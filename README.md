@@ -1,8 +1,8 @@
-# g
+# Yo
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ## Description
-        g
+        Yolo
 
 ## Table of Contents
 [Installation](#Installation)
@@ -13,20 +13,22 @@
 [Questions](#Questions)
 
 ## Installation
-        g
+        Do the ting
 
 ## Usage
-        g
+        I cant
 
 ## License
         This application is covered under the MIT License
+        Learn more about this licesne here: https://opensource.org/licenses/MIT
 
 ## Credits
-        g
+        folks
 
 ## Tests
-        g
+        I dint
 
 ## Questions
-        g
+        If you have any questions about this application, you can find more info at my Github URL here: here
+        Or you can contact me directly at this email address: this
     
