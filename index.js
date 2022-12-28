@@ -98,7 +98,7 @@ inquirer
             badgeLink = 'https://opensource.org/licenses/MPL-2.0';
         } else if (response.Q5 === "The Unlicense") {
             badge = `![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)`;
-            badgeLink = '[http://unlicense.org/](#http://unlicense.org/)';
+            badgeLink = '[http://unlicense.org/](http://unlicense.org/)';
         } else {
             badge = ``
             badgeLink = ``

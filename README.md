@@ -21,7 +21,7 @@
 ## License
         This application is covered under the The Unlicense License
         Learn more about this licesne here:
-[http://unlicense.org/](#http://unlicense.org/)
+[http://unlicense.org/](http://unlicense.org/)
 
 ## Credits
         f
