@@ -17,6 +17,8 @@
 
 ## Usage
         To use the application, just run it and answer the questions in the command line. The readme will be generated automatically.
+        Video walkthrough here:
+https://drive.google.com/file/d/1gzkLRvclPuNoVpv7rrU-NdTcMHaxIbJe/view
 
 ## Credits
         The UofM Bootcamp Team!
