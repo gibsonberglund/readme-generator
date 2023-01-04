@@ -1,5 +1,6 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
+/*
 function renderLicenseBadge() {
   console.log('chup');
   let badge
@@ -45,4 +46,5 @@ function generateMarkdown() {
 module.exports = {
  generateMarkdown,
  renderLicenseBadge
-};
+}; 
+*/

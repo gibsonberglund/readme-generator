@@ -1,12 +1,8 @@
-// TODO: Include packages needed for this application
+//Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
 //const generateMarkdown = require('./utils/generateMarkdown.js');
 
-//generateMarkdown();
-// TODO: Create an array of questions for user input
-
-const Quest = "Describe the function of your application, and the problem it solves for the user.";
 
 // Array of questions that will appear in command line
 inquirer
@@ -18,7 +14,7 @@ inquirer
         },
         {
             type: 'input',
-            message: Quest,
+            message: "Describe the function of your application, and the problem it solves for the user.",
             name: 'Q2',
         },
         {
@@ -42,7 +38,8 @@ inquirer
             Eclipse Public
             GNU General Public
             Mozilla Public
-            The Unlicense`,
+            The Unlicense
+            `,
             name: 'Q5',
         },
         {
@@ -52,7 +49,7 @@ inquirer
         },
         {
             type: 'input',
-            message: "How do you test this application?",
+            message: "How does the user test this application?",
             name: 'Q7',
         },
         {
@@ -99,12 +96,13 @@ inquirer
         } else if (response.Q5 === "The Unlicense") {
             badge = `![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)`;
             badgeLink = '[http://unlicense.org/](http://unlicense.org/)';
+    //if no license is entered, no badge or link is provided
         } else {
             badge = ``
             badgeLink = ``
         };
 
-    //creates README template
+    //template of README that will be created
         let template =
         `# ${response.Q1}
 ${badge}
@@ -126,16 +124,20 @@ ${badge}
 ## Usage
         ${response.Q4}
 
-## License
-        This application is covered under the ${response.Q5} License
-        Learn more about this licesne here:
-${badgeLink}
-
 ## Credits
         ${response.Q6}
 
+## License
+        This application is covered under the ${response.Q5} License
+        Click the link below to learn more about this license:
+${badgeLink}
+
 ## Tests
         ${response.Q7}
+
+## How To Contribute
+        If you would like to make a contribution to this application,
+        you can contact the creators at the Github URL or the email address provided in the following section.
 
 ## Questions
         If you have any questions about this application, you can find more info at my Github URL here: ${response.Q8}
@@ -143,15 +145,8 @@ ${badgeLink}
     `
     //writes README to new .md file
         fs.writeFile('README.md', template, (err) =>
+    //logs errors if any occur
         err ? console.log(err) : console.log("Success!"))
     });
 
 
-
-
-
-// TODO: Create a function to initialize app
-//function init() {}
-
-// Function call to initialize app
-//init();
