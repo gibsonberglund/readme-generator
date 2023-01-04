@@ -2,7 +2,7 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ## Description
-        This application creates a professional readme by asking the user a series of questions. This makes it much easier to create a readme file for any application.
+        This application generates a professional readme by asking the user a series of questions. This makes it very easy to create a readme file for any application.
 
 ## Table of Contents
 [Installation](#Installation)
@@ -13,10 +13,10 @@
 [Questions](#Questions)
 
 ## Installation
-        To use this application you need to install inquirer, using the comman npm i
+        To use this application, you must install the inquirer package, by typing 'npm i' in the command line.
 
 ## Usage
-        To use this application, all you need to do is run it and answer the questions.
+        To use the application, just run it and answer the questions in the command line. The readme will be generated automatically.
 
 ## Credits
         The UofM Bootcamp Team!
@@ -34,6 +34,6 @@ https://opensource.org/licenses/MIT
         you can contact the creators at the Github URL or the email address provided in the following section.
 
 ## Questions
-        If you have any questions about this application, you can find more info at my Github URL here: gibsonberglund.github.io
+        If you have any questions about this application, you can find more info at my Github URL here: github.com/gibsonberglund
         Or you can contact me directly at this email address: berglundgibson@gmail.com
     
